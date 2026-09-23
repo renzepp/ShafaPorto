@@ -1,1 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salsabila Shafa Rentua - Data Science Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">Salsabila Shafa</a>
+        <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Data Science Explorer</h1>
+            <p>Turning data into insights. Building intelligent systems that solve real problems.</p>
+            <p class="hero-tagline">Mathematics Student | ML Enthusiast | Full-Stack Developer</p>
+            <div>
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="#contact" class="cta-button cta-button--ghost">Get In Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <p class="section-subtitle">A mix of academic research, ML applications, and practical solutions</p>
+
+            <div class="project-group">
+                <h3 class="group-title"><span class="group-icon">💡</span> Personal Projects &amp; Side Ventures</h3>
+                <p class="group-desc">Self-initiated projects that demonstrate problem-solving, initiative, and full-stack thinking</p>
+                <!-- kartu dibuat oleh app.js dari data/projects.js -->
+                <div class="projects-grid projects-grid--single" id="projects-personal"></div>
+            </div>
+
+            <div class="project-group">
+                <h3 class="group-title"><span class="group-icon">🎓</span> Academic Research &amp; Coursework</h3>
+                <p class="group-desc">University projects and research demonstrating theoretical knowledge and analytical thinking</p>
+                <div class="projects-grid" id="projects-academic"></div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card"><div class="stat-number">88%</div><div class="stat-label">Model Accuracy (Heart Disease)</div></div>
+                <div class="stat-card"><div class="stat-number">1</div><div class="stat-label">Ongoing Personal Project</div></div>
+                <div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Academic ML/DS Projects</div></div>
+                <div class="stat-card"><div class="stat-number">3000+</div><div class="stat-label">Administrative Correspondence Managed</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills &amp; Tools</h2>
+            <p class="section-subtitle">Technical abilities across data science, ML, and full-stack development</p>
+            <div class="skills-wrapper">
+                <div class="skills-chart-container"><canvas id="skillsChart"></canvas></div>
+                <div class="skills-list">
+                    <div class="skill-item"><h4>📊 Data Science</h4><div class="skill-items">
+                        <span class="skill-badge">Python</span><span class="skill-badge">Data Analysis</span><span class="skill-badge">Statistical Modeling</span></div></div>
+                    <div class="skill-item"><h4>🤖 Machine Learning</h4><div class="skill-items">
+                        <span class="skill-badge">TensorFlow</span><span class="skill-badge">Neural Networks</span><span class="skill-badge">Classification</span></div></div>
+                    <div class="skill-item"><h4>💻 Backend &amp; DevOps</h4><div class="skill-items">
+                        <span class="skill-badge">Supabase</span><span class="skill-badge">GitHub</span><span class="skill-badge">AI Integration</span></div></div>
+                    <div class="skill-item"><h4>🎨 Frontend</h4><div class="skill-items">
+                        <span class="skill-badge">HTML/CSS</span><span class="skill-badge">Interactive UI</span><span class="skill-badge">UX Design</span></div></div>
+                    <div class="skill-item"><h4>📚 Mathematics</h4><div class="skill-items">
+                        <span class="skill-badge">Algorithms</span><span class="skill-badge">Graph Theory</span><span class="skill-badge">Linear Algebra</span></div></div>
+                    <div class="skill-item"><h4>🌟 Soft Skills</h4><div class="skill-items">
+                        <span class="skill-badge">Team Leadership</span><span class="skill-badge">Research Writing</span><span class="skill-badge">Public Speaking</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact">
+                <h2>Let's Connect! 🚀</h2>
+                <p class="contact-text">Interested in data science opportunities? Let's talk!</p>
+                <div class="contact-links">
+                    <a href="mailto:salsabiishafa28@gmail.com">Email</a>
+                    <!-- TODO: ganti dengan profil aslimu -->
+                    <a href="https://github.com/USERNAME" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/USERNAME" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year">2026</span> Salsabila Shafa Rentua. All rights reserved.</p>
+        <p class="footer-note">Based in West Jakarta • Universitas Indonesia</p>
+    </footer>
+
+    <!-- urutan penting: data dulu, baru app -->
+    <script src="data/projects.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
