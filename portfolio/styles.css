@@ -1,1 +1,107 @@
+/* ==========================================================
+   styles.css - urutan: variabel > base > nav > hero > tombol
+   > layout > kartu project > skills > stats > contact
+   > footer > responsive. Warna HANYA dari variabel di bawah.
+   ========================================================== */
 
+/* 1. VARIABEL (samakan namanya dengan variables di Figma) */
+:root {
+  --primary: #A00A5E;
+  --secondary: #D91E63;
+  --accent: #E91E63;
+  --dark: #2D3436;
+  --light: #F3E5F5;
+  --border: #F8BBD0;
+  --surface-pink: #FCE4EC;
+  --surface-gray: #F0F0F0;
+  --white: #fff;
+  --text-muted: #666;
+  --radius-card: 12px;
+  --radius-pill: 50px;
+  --gradient-brand: linear-gradient(135deg, #D91E63 0%, #A00A5E 100%);
+}
+
+/* 2. BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: var(--dark); background: var(--light); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+section { padding: 5rem 0; }
+section h2 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--primary); text-align: center; }
+.section-subtitle { text-align: center; color: var(--text-muted); font-size: 1.1rem; margin-bottom: 3rem; }
+.highlight { color: var(--secondary); font-weight: 600; }
+
+/* 3. NAV */
+nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,.95); backdrop-filter: blur(10px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--border); }
+.logo { font-weight: 700; font-size: 1.3rem; color: var(--primary); text-decoration: none; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--dark); font-size: .95rem; transition: color .3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* 4. HERO */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--gradient-brand); color: var(--white); text-align: center; padding: 2rem; margin-top: 60px; position: relative; overflow: hidden; }
+.hero::before, .hero::after { content: ''; position: absolute; border-radius: 50%; }
+.hero::before { top: -50%; right: -10%; width: 500px; height: 500px; background: rgba(255,255,255,.1); animation: float 6s ease-in-out infinite; }
+.hero::after { bottom: -30%; left: -5%; width: 400px; height: 400px; background: rgba(255,255,255,.05); animation: float 8s ease-in-out infinite reverse; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(30px); } }
+.hero-content { position: relative; z-index: 1; max-width: 800px; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; font-weight: 800; }
+.hero p { font-size: 1.3rem; margin-bottom: 2rem; opacity: .95; }
+.hero .hero-tagline { font-size: 1.1rem; opacity: .9; }
+
+/* 5. TOMBOL */
+.cta-button { display: inline-block; padding: 12px 30px; background: var(--white); color: var(--primary); text-decoration: none; border-radius: var(--radius-pill); font-weight: 600; margin: 0 10px; transition: transform .3s, box-shadow .3s; border: none; cursor: pointer; }
+.cta-button:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,.2); }
+.cta-button--ghost { background: rgba(255,255,255,.2); color: var(--white); border: 2px solid var(--white); }
+
+/* 6. PROJECTS */
+.project-group { margin-bottom: 4rem; }
+.group-title { font-size: 1.8rem; color: var(--primary); margin-bottom: 2rem; display: flex; align-items: center; gap: .8rem; }
+.group-icon { font-size: 2rem; }
+.group-desc { color: var(--text-muted); margin-bottom: 2rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+.projects-grid--single { grid-template-columns: 1fr; }
+.project-card { background: var(--white); border-radius: var(--radius-card); padding: 2rem; border: 1px solid var(--border); transition: all .3s; }
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,.1); border-color: var(--accent); }
+.project-tag { display: inline-block; padding: 4px 12px; background: var(--surface-pink); color: var(--accent); border-radius: 20px; font-size: .8rem; font-weight: 600; margin-bottom: 1rem; }
+.project-card h3 { font-size: 1.5rem; margin-bottom: .5rem; }
+.project-card p { color: var(--text-muted); margin-bottom: 1rem; font-size: .95rem; }
+.tech-stack { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.tech-badge { padding: 4px 10px; background: var(--surface-gray); border-radius: 15px; font-size: .8rem; font-weight: 500; }
+.project-note { background: var(--surface-pink); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: .9rem; }
+.project-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
+.project-links a { padding: 8px 16px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 6px; font-size: .9rem; transition: background .3s; }
+.project-links a:hover { background: var(--secondary); }
+.project-links a.is-disabled { cursor: not-allowed; opacity: .6; }
+
+/* 7. STATS */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 4rem; }
+.stat-card { background: var(--white); padding: 2rem; border-radius: var(--radius-card); text-align: center; border: 1px solid var(--border); }
+.stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: .5rem; }
+.stat-label { color: var(--text-muted); font-size: .95rem; }
+
+/* 8. SKILLS */
+.skills-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-top: 3rem; }
+.skills-chart-container { background: var(--white); border-radius: var(--radius-card); padding: 2rem; border: 1px solid var(--border); }
+.skills-list { display: flex; flex-direction: column; gap: 1.5rem; }
+.skill-item h4 { color: var(--primary); margin-bottom: .5rem; }
+.skill-items { display: flex; flex-wrap: wrap; gap: .5rem; }
+.skill-badge { padding: 6px 12px; background: var(--surface-gray); border-radius: 20px; font-size: .85rem; }
+
+/* 9. CONTACT */
+.contact { background: var(--gradient-brand); color: var(--white); text-align: center; padding: 4rem 2rem; border-radius: var(--radius-card); margin: 4rem 0; }
+.contact h2 { color: var(--white); }
+.contact-text { margin-top: 1rem; font-size: 1.1rem; }
+.contact-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap; }
+.contact-links a { display: inline-block; padding: 10px 20px; background: rgba(255,255,255,.2); color: var(--white); text-decoration: none; border-radius: var(--radius-pill); transition: all .3s; border: 2px solid var(--white); }
+.contact-links a:hover { background: var(--white); color: var(--primary); }
+
+/* 10. FOOTER */
+footer { background: var(--dark); color: var(--white); text-align: center; padding: 2rem; }
+.footer-note { font-size: .9rem; margin-top: .5rem; opacity: .8; }
+
+/* 11. RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.5rem; }
+  .nav-links { gap: 1rem; font-size: .9rem; }
+  .skills-wrapper, .projects-grid { grid-template-columns: 1fr; }
+}
