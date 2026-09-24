@@ -6,19 +6,19 @@
 
 /* 1. VARIABEL (samakan namanya dengan variables di Figma) */
 :root {
-  --primary: #A00A5E;
-  --secondary: #D91E63;
-  --accent: #E91E63;
-  --dark: #2D3436;
-  --light: #F3E5F5;
-  --border: #F8BBD0;
-  --surface-pink: #FCE4EC;
-  --surface-gray: #F0F0F0;
+  --primary: #C41E3A;
+  --secondary: #2C3E50;
+  --accent: #C9A876;
+  --dark: #1F2939;
+  --light: #FFFBF7;
+  --border: #D4CCC4;
+  --surface-tint: #F5EDE6;
+  --surface-gray: #E8E0D8;
   --white: #fff;
-  --text-muted: #666;
+  --text-muted: #6B7280;
   --radius-card: 12px;
   --radius-pill: 50px;
-  --gradient-brand: linear-gradient(135deg, #D91E63 0%, #A00A5E 100%);
+  --gradient-brand: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
 }
 
 /* 2. BASE */
@@ -62,12 +62,12 @@ nav { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,.95); b
 .projects-grid--single { grid-template-columns: 1fr; }
 .project-card { background: var(--white); border-radius: var(--radius-card); padding: 2rem; border: 1px solid var(--border); transition: all .3s; }
 .project-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,.1); border-color: var(--accent); }
-.project-tag { display: inline-block; padding: 4px 12px; background: var(--surface-pink); color: var(--accent); border-radius: 20px; font-size: .8rem; font-weight: 600; margin-bottom: 1rem; }
+.project-tag { display: inline-block; padding: 4px 12px; background: var(--surface-tint); color: var(--accent); border-radius: 20px; font-size: .8rem; font-weight: 600; margin-bottom: 1rem; }
 .project-card h3 { font-size: 1.5rem; margin-bottom: .5rem; }
 .project-card p { color: var(--text-muted); margin-bottom: 1rem; font-size: .95rem; }
 .tech-stack { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
 .tech-badge { padding: 4px 10px; background: var(--surface-gray); border-radius: 15px; font-size: .8rem; font-weight: 500; }
-.project-note { background: var(--surface-pink); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: .9rem; }
+.project-note { background: var(--surface-tint); padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: .9rem; }
 .project-links { display: flex; gap: 1rem; margin-top: 1.5rem; }
 .project-links a { padding: 8px 16px; background: var(--primary); color: var(--white); text-decoration: none; border-radius: 6px; font-size: .9rem; transition: background .3s; }
 .project-links a:hover { background: var(--secondary); }
