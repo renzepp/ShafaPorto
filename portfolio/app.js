@@ -30,6 +30,10 @@ function renderProjects() {
 function initSkillsChart() {
   const canvas = document.getElementById('skillsChart');
   if (!canvas || typeof Chart === 'undefined') return;
+  
+  // Ambil warna primary dari CSS variable
+  const brand = getComputedStyle(document.documentElement).getPropertyValue('--primary').trim();
+  
   new Chart(canvas, {
     type: 'radar',
     data: {
@@ -37,10 +41,10 @@ function initSkillsChart() {
       datasets: [{
         label: 'Proficiency',
         data: [85, 80, 82, 90, 88, 85],
-        borderColor: '#D91E63',
-        backgroundColor: 'rgba(217, 30, 99, 0.1)',
+        borderColor: brand,
+        backgroundColor: brand + '1A',
         borderWidth: 2,
-        pointBackgroundColor: '#D91E63',
+        pointBackgroundColor: brand,
         pointBorderColor: '#fff',
         pointBorderWidth: 2
       }]
