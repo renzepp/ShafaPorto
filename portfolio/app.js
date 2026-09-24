@@ -1,4 +1,4 @@
-/* app.js - urutan: render project > chart skills > smooth scroll > init */
+/* app.js -urutan: render project > chart skills > smooth scroll > init */
 
 /* 1. Render kartu project dari PROJECTS (data/projects.js) */
 function renderProject(p) {
